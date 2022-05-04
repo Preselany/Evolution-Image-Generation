@@ -10,22 +10,7 @@ CHILDREN_COUNT = 3
 GENERATIONS = 200
 MUTATION_RATE = 0.93
 MUTATION_RATE_COLOR = 0.98
-
 OBJECTS_COUNT = 100
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #Open the goal image
 image = Image.open("image.png").convert("RGBA")
@@ -53,8 +38,6 @@ class Object:
 
         #calculate the coordinates since the coordinates i set are supposed to be for center of the object
         x, y = self.coordinates[0] - (object.size[0] // 2), self.coordinates[1] - (object.size[1] // 2)
-
-
 
         #Draw the Object
         canvas.paste(object, (x,y),object)
@@ -94,9 +77,6 @@ class Object:
             child.color[2] += random.choices(blue_range, weights=[MUTATION_RATE_COLOR ** abs(x) for x in blue_range], k=1)[0]
 
             hospital.append(child)
-
-
-
 
 generation_count = 0
 
