@@ -1,3 +1,5 @@
+import operator
+
 from PIL import Image,ImageChops
 import random
 import numpy
@@ -103,11 +105,8 @@ for _ in range(OBJECTS_COUNT):
             score = difference_without_object - difference_with_object
             object.score = score
         #Sort objects based on their score
-        def sort_objects(object):
-            return object.score
+        objects.sort(reverse=True, key=operator.attrgetter('score'))
 
-
-        objects.sort(reverse=True, key=sort_objects)
         #Kill the weak objects, strong ones get to live and reproduce
         objects = objects[:int(len(objects)*SURVIVORS)]
 
