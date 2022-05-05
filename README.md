@@ -19,7 +19,7 @@ OBJECTS_COUNT = 100
 ![Original](https://cdn.discordapp.com/attachments/906261158032457728/971393816814825512/image.png)
 ![Generated](https://cdn.discordapp.com/attachments/906261158032457728/971393816584151100/canvas.png)
 
-Another Settings version that is much faster:
+Another Settings version that is much faster but with a bit of unwanted objects:
 
 NUMBER_OF_STARTING_OBJECTS = 10
 SURVIVORS = 1/10
